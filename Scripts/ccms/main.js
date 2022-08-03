@@ -106,7 +106,7 @@ __webpack_require__.r(__webpack_exports__);
 var AppComponent = /** @class */ (function () {
     function AppComponent(titleService) {
         this.titleService = titleService;
-        this.ApplicationName = "MyFirstGitApplication";
+        this.ApplicationName = "Mahalaxmi Clothes Center";
         this.navbarOpen = false;
     }
     AppComponent.prototype.ngOnInit = function () {
