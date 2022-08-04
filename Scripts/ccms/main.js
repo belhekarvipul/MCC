@@ -207,7 +207,7 @@ var AppService = /** @class */ (function () {
         this.http = http;
     }
     AppService.prototype.getProducts = function () {
-        return this.http.get(_constants__WEBPACK_IMPORTED_MODULE_3__["Constants"].baseURL + "api/products/getproducts");
+        return this.http.get(_constants__WEBPACK_IMPORTED_MODULE_3__["Constants"].baseURL + "api/products/getproducts", _constants__WEBPACK_IMPORTED_MODULE_3__["Constants"].requestOptions);
     };
     AppService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
@@ -230,10 +230,18 @@ var AppService = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Constants", function() { return Constants; });
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
 var Constants = /** @class */ (function () {
     function Constants() {
     }
     Constants.baseURL = "https://belhekarvipul.github.io/MCC/";
+    Constants.headerDict = {
+        'X-Requested-With': 'XMLHttpRequest'
+    };
+    Constants.requestOptions = {
+        headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpHeaders"](Constants.headerDict),
+    };
     return Constants;
 }());
 
