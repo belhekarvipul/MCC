@@ -235,7 +235,7 @@ __webpack_require__.r(__webpack_exports__);
 var Constants = /** @class */ (function () {
     function Constants() {
     }
-    Constants.baseURL = "https://belhekarvipul.github.io/MCC/";
+    Constants.baseURL = "https://cors-anywhere.herokuapp.com/https://belhekarvipul.github.io/MCC/";
     Constants.headerDict = {
         'X-Requested-With': 'XMLHttpRequest'
     };
