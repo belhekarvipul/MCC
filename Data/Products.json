@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "ProductId": 1,
+    "Name": "Test Product",
+    "Description": "Test Description",
+    "Category": "Saree",
+    "ProductImage": "",
+    "Price": "500"
+  },
+  {
+    "ProductId": 2,
+    "Name": "Test Product 2",
+    "Description": "Test Description 2",
+    "Category": "Saree",
+    "ProductImage": "",
+    "Price": "300"
+  }
+]
