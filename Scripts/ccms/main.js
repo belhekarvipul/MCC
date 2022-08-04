@@ -141,13 +141,15 @@ var AppComponent = /** @class */ (function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _app_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.service */ "./src/app/app.service.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./constants */ "./src/app/constants.ts");
+/* harmony import */ var _sarees_sarees_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sarees/sarees.component */ "./src/app/sarees/sarees.component.ts");
+/* harmony import */ var _dresses_dresses_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./dresses/dresses.component */ "./src/app/dresses/dresses.component.ts");
+/* harmony import */ var _app_service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.service */ "./src/app/app.service.ts");
+
 
 
 
@@ -160,16 +162,18 @@ var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _constants__WEBPACK_IMPORTED_MODULE_7__["components"]
+                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+                _sarees_sarees_component__WEBPACK_IMPORTED_MODULE_6__["SareesComponent"],
+                _dresses_dresses_component__WEBPACK_IMPORTED_MODULE_7__["DressesComponent"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"]
             ],
-            providers: [_app_service__WEBPACK_IMPORTED_MODULE_6__["AppService"]],
+            providers: [_app_service__WEBPACK_IMPORTED_MODULE_8__["AppService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
     ], AppModule);
@@ -193,16 +197,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./constants */ "./src/app/constants.ts");
+
 
 
 
 var AppService = /** @class */ (function () {
     function AppService(http) {
         this.http = http;
-        this.baseURL = "http://localhost/CCMS/";
     }
     AppService.prototype.getProducts = function () {
-        return this.http.get(this.baseURL + "api/products/getproducts");
+        return this.http.get(_constants__WEBPACK_IMPORTED_MODULE_3__["Constants"].baseURL + "api/products/getproducts");
     };
     AppService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(),
@@ -219,23 +224,19 @@ var AppService = /** @class */ (function () {
 /*!******************************!*\
   !*** ./src/app/constants.ts ***!
   \******************************/
-/*! exports provided: components */
+/*! exports provided: Constants */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "components", function() { return components; });
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _sarees_sarees_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./sarees/sarees.component */ "./src/app/sarees/sarees.component.ts");
-/* harmony import */ var _dresses_dresses_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dresses/dresses.component */ "./src/app/dresses/dresses.component.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Constants", function() { return Constants; });
+var Constants = /** @class */ (function () {
+    function Constants() {
+    }
+    Constants.baseURL = "http://localhost/CCMS/";
+    return Constants;
+}());
 
-
-
-var components = [
-    _app_component__WEBPACK_IMPORTED_MODULE_0__["AppComponent"],
-    _sarees_sarees_component__WEBPACK_IMPORTED_MODULE_1__["SareesComponent"],
-    _dresses_dresses_component__WEBPACK_IMPORTED_MODULE_2__["DressesComponent"]
-];
 
 
 /***/ }),
